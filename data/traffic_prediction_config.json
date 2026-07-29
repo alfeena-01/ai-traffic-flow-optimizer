@@ -1,0 +1,292 @@
+{
+  "project_info": {
+    "name": "Smart City Traffic Flow Prediction System",
+    "version": "2.4.1",
+    "description": "Sistem prediksi arus lalu lintas kota pintar menggunakan machine learning",
+    "created_date": "2024-01-15",
+    "last_modified": "2024-03-31",
+    "team": "Jakarta Smart City - Traffic Analytics Division"
+  },
+  "data_sources": {
+    "primary": {
+      "type": "traffic_sensor_data",
+      "format": "CSV",
+      "update_frequency": "30 minutes",
+      "retention_period_days": 365,
+      "columns_used": [
+        "timestamp",
+        "sensor_id",
+        "vehicle_count",
+        "average_speed_kmh",
+        "occupancy_rate",
+        "congestion_level"
+      ]
+    },
+    "weather": {
+      "type": "weather_conditions",
+      "format": "CSV",
+      "update_frequency": "1 hour",
+      "retention_period_days": 730,
+      "columns_used": [
+        "timestamp",
+        "temperature_c",
+        "precipitation_mm",
+        "visibility_km",
+        "weather_type"
+      ]
+    },
+    "events": {
+      "type": "traffic_events",
+      "format": "CSV",
+      "update_frequency": "real-time",
+      "retention_period_days": 180,
+      "columns_used": [
+        "event_id",
+        "timestamp_start",
+        "event_type",
+        "severity",
+        "duration_minutes",
+        "affected_lanes"
+      ]
+    },
+    "road_network": {
+      "type": "road_network",
+      "format": "CSV",
+      "update_frequency": "monthly",
+      "retention_period_days": 1095,
+      "columns_used": [
+        "road_id",
+        "road_type",
+        "lanes",
+        "speed_limit_kmh",
+        "capacity_vehicles_per_hour",
+        "surface_condition"
+      ]
+    }
+  },
+  "feature_engineering": {
+    "temporal_features": [
+      "hour_of_day",
+      "day_of_week",
+      "month",
+      "is_weekend",
+      "is_holiday",
+      "is_rush_hour_morning",
+      "is_rush_hour_evening",
+      "time_sin",
+      "time_cos",
+      "day_sin",
+      "day_cos"
+    ],
+    "spatial_features": [
+      "sensor_latitude",
+      "sensor_longitude",
+      "district_encoded",
+      "road_type_encoded",
+      "nearby_sensor_avg_traffic",
+      "distance_to_city_center_km"
+    ],
+    "weather_features": [
+      "temperature_c",
+      "humidity_pct",
+      "precipitation_mm",
+      "wind_speed_kmh",
+      "visibility_km",
+      "weather_type_encoded",
+      "is_raining",
+      "is_severe_weather"
+    ],
+    "traffic_features": [
+      "vehicle_count_lag_1h",
+      "vehicle_count_lag_2h",
+      "vehicle_count_lag_24h",
+      "vehicle_count_rolling_mean_3h",
+      "vehicle_count_rolling_std_3h",
+      "occupancy_rate_lag_1h",
+      "speed_lag_1h",
+      "congestion_trend"
+    ],
+    "event_features": [
+      "active_events_nearby",
+      "nearest_event_distance_km",
+      "event_severity_score",
+      "affected_lanes_total",
+      "event_count_last_6h"
+    ]
+  },
+  "model_configuration": {
+    "models": [
+      {
+        "name": "LSTM_Traffic_Predictor",
+        "type": "LSTM Neural Network",
+        "framework": "PyTorch 2.1",
+        "input_sequence_length": 48,
+        "prediction_horizon_minutes": [
+          30,
+          60,
+          120,
+          240
+        ],
+        "hidden_units": [
+          128,
+          64,
+          32
+        ],
+        "dropout_rate": 0.3,
+        "learning_rate": 0.001,
+        "batch_size": 64,
+        "epochs": 100,
+        "early_stopping_patience": 10,
+        "features_count": 42,
+        "performance": {
+          "mae": 12.3,
+          "rmse": 18.7,
+          "r2_score": 0.89,
+          "mape": 8.2
+        }
+      },
+      {
+        "name": "XGBoost_Congestion_Classifier",
+        "type": "XGBoost",
+        "framework": "xgboost 2.0",
+        "n_estimators": 500,
+        "max_depth": 8,
+        "learning_rate": 0.05,
+        "subsample": 0.8,
+        "colsample_bytree": 0.8,
+        "min_child_weight": 5,
+        "gamma": 0.1,
+        "objective": "multi:softprob",
+        "num_classes": 4,
+        "performance": {
+          "accuracy": 0.91,
+          "precision_macro": 0.89,
+          "recall_macro": 0.87,
+          "f1_macro": 0.88
+        }
+      },
+      {
+        "name": "GBM_Speed_Regressor",
+        "type": "LightGBM",
+        "framework": "lightgbm 4.1",
+        "n_estimators": 800,
+        "max_depth": 10,
+        "learning_rate": 0.03,
+        "num_leaves": 63,
+        "min_data_in_leaf": 20,
+        "feature_fraction": 0.8,
+        "bagging_fraction": 0.8,
+        "bagging_freq": 5,
+        "objective": "regression",
+        "performance": {
+          "mae": 3.2,
+          "rmse": 5.1,
+          "r2_score": 0.93,
+          "mape": 5.8
+        }
+      }
+    ],
+    "ensemble": {
+      "method": "weighted_average",
+      "weights": {
+        "LSTM_Traffic_Predictor": 0.45,
+        "XGBoost_Congestion_Classifier": 0.3,
+        "GBM_Speed_Regressor": 0.25
+      },
+      "meta_learner": "Ridge Regression"
+    }
+  },
+  "training_configuration": {
+    "train_test_split": 0.8,
+    "validation_split": 0.1,
+    "test_split": 0.1,
+    "cross_validation_folds": 5,
+    "random_seed": 42,
+    "training_period": {
+      "start": "2024-01-01",
+      "end": "2024-03-15"
+    },
+    "test_period": {
+      "start": "2024-03-16",
+      "end": "2024-03-31"
+    },
+    "hyperparameter_tuning": {
+      "method": "Optuna",
+      "n_trials": 200,
+      "objective": "val_rmse",
+      "direction": "minimize"
+    }
+  },
+  "prediction_output": {
+    "targets": [
+      {
+        "name": "vehicle_count_30min",
+        "type": "regression",
+        "unit": "vehicles",
+        "description": "Prediksi jumlah kendaraan 30 menit ke depan"
+      },
+      {
+        "name": "vehicle_count_60min",
+        "type": "regression",
+        "unit": "vehicles",
+        "description": "Prediksi jumlah kendaraan 60 menit ke depan"
+      },
+      {
+        "name": "congestion_level_30min",
+        "type": "classification",
+        "classes": [
+          "Low",
+          "Medium",
+          "High",
+          "Critical"
+        ],
+        "description": "Prediksi tingkat kemacetan 30 menit ke depan"
+      },
+      {
+        "name": "average_speed_60min",
+        "type": "regression",
+        "unit": "km/h",
+        "description": "Prediksi kecepatan rata-rata 60 menit ke depan"
+      }
+    ],
+    "output_format": "JSON",
+    "update_frequency": "5 minutes",
+    "confidence_interval": 0.95
+  },
+  "deployment": {
+    "infrastructure": "Kubernetes (AWS EKS)",
+    "api_endpoint": "/api/v2/predictions/traffic",
+    "model_serving": "MLflow 2.8",
+    "monitoring": "Prometheus + Grafana",
+    "logging": "ELK Stack",
+    "alerting": {
+      "model_drift_threshold": 0.05,
+      "prediction_latency_ms": 500,
+      "data_quality_check": "every 30 minutes"
+    },
+    "scaling": {
+      "min_replicas": 2,
+      "max_replicas": 10,
+      "target_cpu_utilization": 70
+    }
+  },
+  "data_quality_rules": {
+    "missing_value_threshold_pct": 5.0,
+    "outlier_detection_method": "IQR",
+    "outlier_threshold": 3.0,
+    "sensor_downtime_alert_minutes": 30,
+    "data_freshness_max_delay_minutes": 15,
+    "vehicle_count_range": [
+      0,
+      500
+    ],
+    "speed_range_kmh": [
+      0,
+      150
+    ],
+    "occupancy_range": [
+      0.0,
+      1.0
+    ]
+  }
+}

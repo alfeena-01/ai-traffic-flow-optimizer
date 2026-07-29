@@ -1,0 +1,1462 @@
+{
+  "dataset_info": {
+    "name": "Smart City Traffic Sensor Network - Jakarta",
+    "description": "Metadata dan konfigurasi sensor lalu lintas di wilayah DKI Jakarta",
+    "total_sensors": 50,
+    "last_updated": "2024-03-31T23:55:00+07:00",
+    "coordinate_system": "WGS84",
+    "coverage_area": "DKI Jakarta dan sekitarnya"
+  },
+  "sensors": [
+    {
+      "sensor_id": "SEN-001",
+      "location_name": "Jl. Sudirman - Bundaran HI",
+      "coordinates": {
+        "latitude": -6.337762,
+        "longitude": 106.853379
+      },
+      "sensor_type": "Camera",
+      "installation_date": "2021-03-17",
+      "status": "Active",
+      "coverage_direction": "East",
+      "detection_range_m": 15,
+      "sampling_rate_seconds": 300,
+      "road_segment_id": "RD-0126",
+      "district": "Cakung",
+      "calibration_date": "2023-12-13",
+      "firmware_version": "v2.2.3",
+      "communication_protocol": "LoRaWAN",
+      "power_source": "Hybrid",
+      "last_data_transmission": "2024-03-30 10:56:00",
+      "metadata": {
+        "manufacturer": "Siemens",
+        "model": "X-Stream",
+        "height_m": 5.8,
+        "lane_coverage": 3,
+        "has_anpr": true,
+        "has_speed_enforcement": true
+      }
+    },
+    {
+      "sensor_id": "SEN-002",
+      "location_name": "Jl. Thamrin - Monas",
+      "coordinates": {
+        "latitude": -6.140999,
+        "longitude": 106.792419
+      },
+      "sensor_type": "Lidar",
+      "installation_date": "2021-03-19",
+      "status": "Active",
+      "coverage_direction": "West",
+      "detection_range_m": 50,
+      "sampling_rate_seconds": 120,
+      "road_segment_id": "RD-0151",
+      "district": "Pluit",
+      "calibration_date": "2023-10-29",
+      "firmware_version": "v3.0.1",
+      "communication_protocol": "WiFi",
+      "power_source": "Hybrid",
+      "last_data_transmission": "2024-03-30 14:37:00",
+      "metadata": {
+        "manufacturer": "Siemens",
+        "model": "X-Stream",
+        "height_m": 7.0,
+        "lane_coverage": 3,
+        "has_anpr": false,
+        "has_speed_enforcement": false
+      }
+    },
+    {
+      "sensor_id": "SEN-003",
+      "location_name": "Jl. Gatot Subroto - Kuningan",
+      "coordinates": {
+        "latitude": -6.227011,
+        "longitude": 106.738791
+      },
+      "sensor_type": "Infrared",
+      "installation_date": "2023-02-16",
+      "status": "Active",
+      "coverage_direction": "South-West",
+      "detection_range_m": 20,
+      "sampling_rate_seconds": 60,
+      "road_segment_id": "RD-0012",
+      "district": "Senayan",
+      "calibration_date": "2024-03-10",
+      "firmware_version": "v3.2.5",
+      "communication_protocol": "4G/LTE",
+      "power_source": "Grid",
+      "last_data_transmission": "2024-03-30 14:05:00",
+      "metadata": {
+        "manufacturer": "Q-Free",
+        "model": "RTMS-X",
+        "height_m": 7.1,
+        "lane_coverage": 4,
+        "has_anpr": false,
+        "has_speed_enforcement": false
+      }
+    },
+    {
+      "sensor_id": "SEN-004",
+      "location_name": "Jl. Rasuna Said - Setiabudi",
+      "coordinates": {
+        "latitude": -6.186329,
+        "longitude": 106.744133
+      },
+      "sensor_type": "Camera",
+      "installation_date": "2021-09-01",
+      "status": "Active",
+      "coverage_direction": "North-East",
+      "detection_range_m": 15,
+      "sampling_rate_seconds": 30,
+      "road_segment_id": "RD-0087",
+      "district": "Pluit",
+      "calibration_date": "2023-11-20",
+      "firmware_version": "v3.2.5",
+      "communication_protocol": "4G/LTE",
+      "power_source": "Solar Panel",
+      "last_data_transmission": "2024-03-30 21:46:00",
+      "metadata": {
+        "manufacturer": "Q-Free",
+        "model": "X-Stream",
+        "height_m": 6.5,
+        "lane_coverage": 3,
+        "has_anpr": false,
+        "has_speed_enforcement": true
+      }
+    },
+    {
+      "sensor_id": "SEN-005",
+      "location_name": "Jl. HR Rasuna Said - Casablanca",
+      "coordinates": {
+        "latitude": -6.245345,
+        "longitude": 106.974337
+      },
+      "sensor_type": "Lidar",
+      "installation_date": "2022-03-02",
+      "status": "Active",
+      "coverage_direction": "South-West",
+      "detection_range_m": 30,
+      "sampling_rate_seconds": 120,
+      "road_segment_id": "RD-0143",
+      "district": "Mangga Dua",
+      "calibration_date": "2024-01-08",
+      "firmware_version": "v3.2.5",
+      "communication_protocol": "5G",
+      "power_source": "Battery",
+      "last_data_transmission": "2024-03-30 08:55:00",
+      "metadata": {
+        "manufacturer": "Swarco",
+        "model": "SmartSensor HD",
+        "height_m": 7.8,
+        "lane_coverage": 5,
+        "has_anpr": false,
+        "has_speed_enforcement": true
+      }
+    },
+    {
+      "sensor_id": "SEN-006",
+      "location_name": "Jl. Satrio - Mega Kuningan",
+      "coordinates": {
+        "latitude": -6.23058,
+        "longitude": 106.806626
+      },
+      "sensor_type": "Lidar",
+      "installation_date": "2023-04-12",
+      "status": "Active",
+      "coverage_direction": "North-East",
+      "detection_range_m": 50,
+      "sampling_rate_seconds": 60,
+      "road_segment_id": "RD-0032",
+      "district": "Sudirman",
+      "calibration_date": "2024-03-27",
+      "firmware_version": "v2.1.0",
+      "communication_protocol": "LoRaWAN",
+      "power_source": "Grid",
+      "last_data_transmission": "2024-03-30 12:50:00",
+      "metadata": {
+        "manufacturer": "Kapsch",
+        "model": "SmartSensor HD",
+        "height_m": 5.8,
+        "lane_coverage": 5,
+        "has_anpr": false,
+        "has_speed_enforcement": true
+      }
+    },
+    {
+      "sensor_id": "SEN-007",
+      "location_name": "Jl. Jend. Sudirman - Semanggi",
+      "coordinates": {
+        "latitude": -6.293613,
+        "longitude": 106.7379
+      },
+      "sensor_type": "Camera",
+      "installation_date": "2022-07-07",
+      "status": "Active",
+      "coverage_direction": "East",
+      "detection_range_m": 10,
+      "sampling_rate_seconds": 300,
+      "road_segment_id": "RD-0140",
+      "district": "PIK",
+      "calibration_date": "2023-10-12",
+      "firmware_version": "v3.2.5",
+      "communication_protocol": "5G",
+      "power_source": "Grid",
+      "last_data_transmission": "2024-03-30 14:42:00",
+      "metadata": {
+        "manufacturer": "Siemens",
+        "model": "TMS-2000",
+        "height_m": 6.1,
+        "lane_coverage": 3,
+        "has_anpr": true,
+        "has_speed_enforcement": false
+      }
+    },
+    {
+      "sensor_id": "SEN-008",
+      "location_name": "Jl. Asia Afrika - Gelora Bung Karno",
+      "coordinates": {
+        "latitude": -6.200007,
+        "longitude": 106.958717
+      },
+      "sensor_type": "Inductive Loop",
+      "installation_date": "2022-07-26",
+      "status": "Active",
+      "coverage_direction": "South-West",
+      "detection_range_m": 5,
+      "sampling_rate_seconds": 60,
+      "road_segment_id": "RD-0108",
+      "district": "Pluit",
+      "calibration_date": "2023-10-28",
+      "firmware_version": "v2.1.0",
+      "communication_protocol": "WiFi",
+      "power_source": "Battery",
+      "last_data_transmission": "2024-03-30 06:27:00",
+      "metadata": {
+        "manufacturer": "Siemens",
+        "model": "RTMS-X",
+        "height_m": 6.6,
+        "lane_coverage": 3,
+        "has_anpr": false,
+        "has_speed_enforcement": true
+      }
+    },
+    {
+      "sensor_id": "SEN-009",
+      "location_name": "Jl. Jend. Gatot Subroto - Slipi",
+      "coordinates": {
+        "latitude": -6.207188,
+        "longitude": 106.700424
+      },
+      "sensor_type": "Infrared",
+      "installation_date": "2020-09-27",
+      "status": "Active",
+      "coverage_direction": "South-West",
+      "detection_range_m": 20,
+      "sampling_rate_seconds": 300,
+      "road_segment_id": "RD-0125",
+      "district": "Grogol",
+      "calibration_date": "2024-01-09",
+      "firmware_version": "v2.2.3",
+      "communication_protocol": "Fiber",
+      "power_source": "Grid",
+      "last_data_transmission": "2024-03-30 21:28:00",
+      "metadata": {
+        "manufacturer": "Kapsch",
+        "model": "TrafiRadar",
+        "height_m": 4.7,
+        "lane_coverage": 5,
+        "has_anpr": false,
+        "has_speed_enforcement": false
+      }
+    },
+    {
+      "sensor_id": "SEN-010",
+      "location_name": "Jl. MT Haryono - Cawang",
+      "coordinates": {
+        "latitude": -6.139249,
+        "longitude": 106.791569
+      },
+      "sensor_type": "Radar",
+      "installation_date": "2023-03-27",
+      "status": "Active",
+      "coverage_direction": "North-East",
+      "detection_range_m": 20,
+      "sampling_rate_seconds": 30,
+      "road_segment_id": "RD-0014",
+      "district": "Bekasi",
+      "calibration_date": "2023-12-05",
+      "firmware_version": "v3.1.0",
+      "communication_protocol": "Fiber",
+      "power_source": "Battery",
+      "last_data_transmission": "2024-03-30 18:15:00",
+      "metadata": {
+        "manufacturer": "Siemens",
+        "model": "SmartSensor HD",
+        "height_m": 6.6,
+        "lane_coverage": 5,
+        "has_anpr": false,
+        "has_speed_enforcement": false
+      }
+    },
+    {
+      "sensor_id": "SEN-011",
+      "location_name": "Jl. Casablanca - Kampung Melayu",
+      "coordinates": {
+        "latitude": -6.141405,
+        "longitude": 106.828384
+      },
+      "sensor_type": "Inductive Loop",
+      "installation_date": "2021-03-24",
+      "status": "Active",
+      "coverage_direction": "South",
+      "detection_range_m": 5,
+      "sampling_rate_seconds": 120,
+      "road_segment_id": "RD-0176",
+      "district": "PIK",
+      "calibration_date": "2024-03-02",
+      "firmware_version": "v2.1.0",
+      "communication_protocol": "LoRaWAN",
+      "power_source": "Solar Panel",
+      "last_data_transmission": "2024-03-30 22:16:00",
+      "metadata": {
+        "manufacturer": "Kapsch",
+        "model": "RTMS-X",
+        "height_m": 5.3,
+        "lane_coverage": 4,
+        "has_anpr": false,
+        "has_speed_enforcement": true
+      }
+    },
+    {
+      "sensor_id": "SEN-012",
+      "location_name": "Jl. Pemuda - Senen",
+      "coordinates": {
+        "latitude": -6.328957,
+        "longitude": 106.84183
+      },
+      "sensor_type": "Camera",
+      "installation_date": "2022-04-02",
+      "status": "Active",
+      "coverage_direction": "North",
+      "detection_range_m": 50,
+      "sampling_rate_seconds": 300,
+      "road_segment_id": "RD-0108",
+      "district": "Cakung",
+      "calibration_date": "2024-01-05",
+      "firmware_version": "v2.2.3",
+      "communication_protocol": "4G/LTE",
+      "power_source": "Grid",
+      "last_data_transmission": "2024-03-30 06:52:00",
+      "metadata": {
+        "manufacturer": "Q-Free",
+        "model": "TMS-2000",
+        "height_m": 7.3,
+        "lane_coverage": 5,
+        "has_anpr": true,
+        "has_speed_enforcement": true
+      }
+    },
+    {
+      "sensor_id": "SEN-013",
+      "location_name": "Jl. Gajah Mada - Mangga Dua",
+      "coordinates": {
+        "latitude": -6.171103,
+        "longitude": 106.965013
+      },
+      "sensor_type": "Camera",
+      "installation_date": "2022-01-22",
+      "status": "Active",
+      "coverage_direction": "South",
+      "detection_range_m": 20,
+      "sampling_rate_seconds": 120,
+      "road_segment_id": "RD-0028",
+      "district": "Menteng",
+      "calibration_date": "2024-01-18",
+      "firmware_version": "v3.2.5",
+      "communication_protocol": "5G",
+      "power_source": "Solar Panel",
+      "last_data_transmission": "2024-03-30 13:36:00",
+      "metadata": {
+        "manufacturer": "Siemens",
+        "model": "TMS-2000",
+        "height_m": 7.6,
+        "lane_coverage": 6,
+        "has_anpr": false,
+        "has_speed_enforcement": false
+      }
+    },
+    {
+      "sensor_id": "SEN-014",
+      "location_name": "Jl. Hayam Wuruk - Harmoni",
+      "coordinates": {
+        "latitude": -6.331333,
+        "longitude": 106.70249
+      },
+      "sensor_type": "Inductive Loop",
+      "installation_date": "2023-02-08",
+      "status": "Active",
+      "coverage_direction": "East",
+      "detection_range_m": 50,
+      "sampling_rate_seconds": 60,
+      "road_segment_id": "RD-0036",
+      "district": "Bekasi",
+      "calibration_date": "2023-10-16",
+      "firmware_version": "v2.2.3",
+      "communication_protocol": "LoRaWAN",
+      "power_source": "Solar Panel",
+      "last_data_transmission": "2024-03-30 09:59:00",
+      "metadata": {
+        "manufacturer": "Q-Free",
+        "model": "X-Stream",
+        "height_m": 7.4,
+        "lane_coverage": 3,
+        "has_anpr": false,
+        "has_speed_enforcement": true
+      }
+    },
+    {
+      "sensor_id": "SEN-015",
+      "location_name": "Jl. KS Tubun - Slipi",
+      "coordinates": {
+        "latitude": -6.284764,
+        "longitude": 106.859721
+      },
+      "sensor_type": "Camera",
+      "installation_date": "2022-01-26",
+      "status": "Active",
+      "coverage_direction": "South-West",
+      "detection_range_m": 5,
+      "sampling_rate_seconds": 120,
+      "road_segment_id": "RD-0155",
+      "district": "Pluit",
+      "calibration_date": "2024-01-06",
+      "firmware_version": "v2.1.0",
+      "communication_protocol": "WiFi",
+      "power_source": "Grid",
+      "last_data_transmission": "2024-03-30 07:05:00",
+      "metadata": {
+        "manufacturer": "Siemens",
+        "model": "TrafiRadar",
+        "height_m": 5.1,
+        "lane_coverage": 6,
+        "has_anpr": false,
+        "has_speed_enforcement": true
+      }
+    },
+    {
+      "sensor_id": "SEN-016",
+      "location_name": "Jl. Proklamasi - Menteng",
+      "coordinates": {
+        "latitude": -6.333568,
+        "longitude": 106.748748
+      },
+      "sensor_type": "Camera",
+      "installation_date": "2023-05-29",
+      "status": "Active",
+      "coverage_direction": "West",
+      "detection_range_m": 30,
+      "sampling_rate_seconds": 30,
+      "road_segment_id": "RD-0176",
+      "district": "Bekasi",
+      "calibration_date": "2023-12-12",
+      "firmware_version": "v3.0.1",
+      "communication_protocol": "4G/LTE",
+      "power_source": "Hybrid",
+      "last_data_transmission": "2024-03-30 14:29:00",
+      "metadata": {
+        "manufacturer": "Q-Free",
+        "model": "RTMS-X",
+        "height_m": 7.9,
+        "lane_coverage": 4,
+        "has_anpr": false,
+        "has_speed_enforcement": true
+      }
+    },
+    {
+      "sensor_id": "SEN-017",
+      "location_name": "Jl. Diponegoro - Cikini",
+      "coordinates": {
+        "latitude": -6.130186,
+        "longitude": 106.804042
+      },
+      "sensor_type": "Infrared",
+      "installation_date": "2022-09-13",
+      "status": "Maintenance",
+      "coverage_direction": "South",
+      "detection_range_m": 30,
+      "sampling_rate_seconds": 300,
+      "road_segment_id": "RD-0037",
+      "district": "Kelapa Gading",
+      "calibration_date": "2024-03-27",
+      "firmware_version": "v3.1.0",
+      "communication_protocol": "4G/LTE",
+      "power_source": "Solar Panel",
+      "last_data_transmission": "2024-03-30 09:37:00",
+      "metadata": {
+        "manufacturer": "Kapsch",
+        "model": "SmartSensor HD",
+        "height_m": 4.7,
+        "lane_coverage": 1,
+        "has_anpr": false,
+        "has_speed_enforcement": false
+      }
+    },
+    {
+      "sensor_id": "SEN-018",
+      "location_name": "Jl. Raden Saleh - Salemba",
+      "coordinates": {
+        "latitude": -6.184257,
+        "longitude": 106.800143
+      },
+      "sensor_type": "Infrared",
+      "installation_date": "2023-05-03",
+      "status": "Active",
+      "coverage_direction": "South-West",
+      "detection_range_m": 20,
+      "sampling_rate_seconds": 300,
+      "road_segment_id": "RD-0134",
+      "district": "Bekasi",
+      "calibration_date": "2024-02-08",
+      "firmware_version": "v2.1.0",
+      "communication_protocol": "4G/LTE",
+      "power_source": "Grid",
+      "last_data_transmission": "2024-03-30 00:12:00",
+      "metadata": {
+        "manufacturer": "Kapsch",
+        "model": "RTMS-X",
+        "height_m": 4.7,
+        "lane_coverage": 1,
+        "has_anpr": true,
+        "has_speed_enforcement": false
+      }
+    },
+    {
+      "sensor_id": "SEN-019",
+      "location_name": "Jl. Kramat Raya - Senen",
+      "coordinates": {
+        "latitude": -6.152351,
+        "longitude": 106.900746
+      },
+      "sensor_type": "Infrared",
+      "installation_date": "2021-10-29",
+      "status": "Active",
+      "coverage_direction": "East",
+      "detection_range_m": 15,
+      "sampling_rate_seconds": 300,
+      "road_segment_id": "RD-0064",
+      "district": "Pluit",
+      "calibration_date": "2024-03-02",
+      "firmware_version": "v2.1.0",
+      "communication_protocol": "5G",
+      "power_source": "Hybrid",
+      "last_data_transmission": "2024-03-30 05:58:00",
+      "metadata": {
+        "manufacturer": "Kapsch",
+        "model": "X-Stream",
+        "height_m": 7.7,
+        "lane_coverage": 6,
+        "has_anpr": false,
+        "has_speed_enforcement": true
+      }
+    },
+    {
+      "sensor_id": "SEN-020",
+      "location_name": "Jl. Raya Bogor - Cibubur",
+      "coordinates": {
+        "latitude": -6.119053,
+        "longitude": 106.848036
+      },
+      "sensor_type": "Radar",
+      "installation_date": "2021-10-07",
+      "status": "Active",
+      "coverage_direction": "North-East",
+      "detection_range_m": 20,
+      "sampling_rate_seconds": 120,
+      "road_segment_id": "RD-0025",
+      "district": "Cibubur",
+      "calibration_date": "2024-03-09",
+      "firmware_version": "v2.1.0",
+      "communication_protocol": "4G/LTE",
+      "power_source": "Hybrid",
+      "last_data_transmission": "2024-03-30 15:44:00",
+      "metadata": {
+        "manufacturer": "Swarco",
+        "model": "TrafiRadar",
+        "height_m": 7.0,
+        "lane_coverage": 6,
+        "has_anpr": false,
+        "has_speed_enforcement": true
+      }
+    },
+    {
+      "sensor_id": "SEN-021",
+      "location_name": "Jl. TB Simatupang - Ciracas",
+      "coordinates": {
+        "latitude": -6.170331,
+        "longitude": 106.995482
+      },
+      "sensor_type": "Lidar",
+      "installation_date": "2023-06-07",
+      "status": "Maintenance",
+      "coverage_direction": "South-West",
+      "detection_range_m": 15,
+      "sampling_rate_seconds": 300,
+      "road_segment_id": "RD-0143",
+      "district": "Cibubur",
+      "calibration_date": "2024-02-08",
+      "firmware_version": "v3.1.0",
+      "communication_protocol": "Fiber",
+      "power_source": "Grid",
+      "last_data_transmission": "2024-03-30 21:30:00",
+      "metadata": {
+        "manufacturer": "Swarco",
+        "model": "TMS-2000",
+        "height_m": 5.8,
+        "lane_coverage": 1,
+        "has_anpr": true,
+        "has_speed_enforcement": false
+      }
+    },
+    {
+      "sensor_id": "SEN-022",
+      "location_name": "Jl. Pondok Indah - Pondok Pinang",
+      "coordinates": {
+        "latitude": -6.200271,
+        "longitude": 106.78597
+      },
+      "sensor_type": "Lidar",
+      "installation_date": "2021-04-09",
+      "status": "Active",
+      "coverage_direction": "South",
+      "detection_range_m": 15,
+      "sampling_rate_seconds": 120,
+      "road_segment_id": "RD-0051",
+      "district": "Depok",
+      "calibration_date": "2024-02-29",
+      "firmware_version": "v2.2.3",
+      "communication_protocol": "LoRaWAN",
+      "power_source": "Solar Panel",
+      "last_data_transmission": "2024-03-30 06:35:00",
+      "metadata": {
+        "manufacturer": "Siemens",
+        "model": "RTMS-X",
+        "height_m": 6.4,
+        "lane_coverage": 5,
+        "has_anpr": false,
+        "has_speed_enforcement": false
+      }
+    },
+    {
+      "sensor_id": "SEN-023",
+      "location_name": "Jl. Fatmawati - Cipete",
+      "coordinates": {
+        "latitude": -6.318071,
+        "longitude": 106.894674
+      },
+      "sensor_type": "Radar",
+      "installation_date": "2021-10-04",
+      "status": "Active",
+      "coverage_direction": "South",
+      "detection_range_m": 20,
+      "sampling_rate_seconds": 120,
+      "road_segment_id": "RD-0148",
+      "district": "Cibubur",
+      "calibration_date": "2024-01-09",
+      "firmware_version": "v3.1.0",
+      "communication_protocol": "5G",
+      "power_source": "Hybrid",
+      "last_data_transmission": "2024-03-30 10:36:00",
+      "metadata": {
+        "manufacturer": "Efkon",
+        "model": "SmartSensor HD",
+        "height_m": 6.4,
+        "lane_coverage": 1,
+        "has_anpr": true,
+        "has_speed_enforcement": false
+      }
+    },
+    {
+      "sensor_id": "SEN-024",
+      "location_name": "Jl. Raya Kebayoran - Blok M",
+      "coordinates": {
+        "latitude": -6.31895,
+        "longitude": 106.813604
+      },
+      "sensor_type": "Inductive Loop",
+      "installation_date": "2021-04-26",
+      "status": "Active",
+      "coverage_direction": "North",
+      "detection_range_m": 20,
+      "sampling_rate_seconds": 30,
+      "road_segment_id": "RD-0040",
+      "district": "Pluit",
+      "calibration_date": "2024-01-16",
+      "firmware_version": "v2.1.0",
+      "communication_protocol": "4G/LTE",
+      "power_source": "Battery",
+      "last_data_transmission": "2024-03-30 17:14:00",
+      "metadata": {
+        "manufacturer": "Q-Free",
+        "model": "TrafiRadar",
+        "height_m": 4.9,
+        "lane_coverage": 3,
+        "has_anpr": false,
+        "has_speed_enforcement": false
+      }
+    },
+    {
+      "sensor_id": "SEN-025",
+      "location_name": "Jl. Metro Pondok Indah - Ciputat",
+      "coordinates": {
+        "latitude": -6.226494,
+        "longitude": 106.939068
+      },
+      "sensor_type": "Camera",
+      "installation_date": "2022-12-16",
+      "status": "Active",
+      "coverage_direction": "West",
+      "detection_range_m": 20,
+      "sampling_rate_seconds": 120,
+      "road_segment_id": "RD-0066",
+      "district": "Depok",
+      "calibration_date": "2023-12-13",
+      "firmware_version": "v3.1.0",
+      "communication_protocol": "4G/LTE",
+      "power_source": "Grid",
+      "last_data_transmission": "2024-03-30 13:41:00",
+      "metadata": {
+        "manufacturer": "Kapsch",
+        "model": "RTMS-X",
+        "height_m": 7.7,
+        "lane_coverage": 3,
+        "has_anpr": true,
+        "has_speed_enforcement": false
+      }
+    },
+    {
+      "sensor_id": "SEN-026",
+      "location_name": "Jl. Ciledug - Tangerang",
+      "coordinates": {
+        "latitude": -6.173777,
+        "longitude": 106.733769
+      },
+      "sensor_type": "Camera",
+      "installation_date": "2020-11-07",
+      "status": "Active",
+      "coverage_direction": "South",
+      "detection_range_m": 10,
+      "sampling_rate_seconds": 60,
+      "road_segment_id": "RD-0049",
+      "district": "Sudirman",
+      "calibration_date": "2024-03-24",
+      "firmware_version": "v3.0.1",
+      "communication_protocol": "4G/LTE",
+      "power_source": "Solar Panel",
+      "last_data_transmission": "2024-03-30 17:46:00",
+      "metadata": {
+        "manufacturer": "Swarco",
+        "model": "RTMS-X",
+        "height_m": 8.0,
+        "lane_coverage": 5,
+        "has_anpr": true,
+        "has_speed_enforcement": true
+      }
+    },
+    {
+      "sensor_id": "SEN-027",
+      "location_name": "Jl. Raya Meruya - Kembangan",
+      "coordinates": {
+        "latitude": -6.120973,
+        "longitude": 106.847165
+      },
+      "sensor_type": "Infrared",
+      "installation_date": "2022-02-18",
+      "status": "Active",
+      "coverage_direction": "South",
+      "detection_range_m": 50,
+      "sampling_rate_seconds": 60,
+      "road_segment_id": "RD-0143",
+      "district": "Senen",
+      "calibration_date": "2023-10-13",
+      "firmware_version": "v3.0.1",
+      "communication_protocol": "WiFi",
+      "power_source": "Grid",
+      "last_data_transmission": "2024-03-30 00:21:00",
+      "metadata": {
+        "manufacturer": "Siemens",
+        "model": "RTMS-X",
+        "height_m": 6.8,
+        "lane_coverage": 2,
+        "has_anpr": false,
+        "has_speed_enforcement": false
+      }
+    },
+    {
+      "sensor_id": "SEN-028",
+      "location_name": "Jl. Daan Mogot - Grogol",
+      "coordinates": {
+        "latitude": -6.112798,
+        "longitude": 106.865693
+      },
+      "sensor_type": "Inductive Loop",
+      "installation_date": "2022-03-11",
+      "status": "Active",
+      "coverage_direction": "North-East",
+      "detection_range_m": 20,
+      "sampling_rate_seconds": 60,
+      "road_segment_id": "RD-0155",
+      "district": "Kemang",
+      "calibration_date": "2023-11-09",
+      "firmware_version": "v3.1.0",
+      "communication_protocol": "WiFi",
+      "power_source": "Solar Panel",
+      "last_data_transmission": "2024-03-30 04:30:00",
+      "metadata": {
+        "manufacturer": "Efkon",
+        "model": "SmartSensor HD",
+        "height_m": 5.0,
+        "lane_coverage": 1,
+        "has_anpr": false,
+        "has_speed_enforcement": true
+      }
+    },
+    {
+      "sensor_id": "SEN-029",
+      "location_name": "Jl. Raya Kamal - Penjaringan",
+      "coordinates": {
+        "latitude": -6.313178,
+        "longitude": 106.772004
+      },
+      "sensor_type": "Infrared",
+      "installation_date": "2021-04-10",
+      "status": "Active",
+      "coverage_direction": "West",
+      "detection_range_m": 10,
+      "sampling_rate_seconds": 60,
+      "road_segment_id": "RD-0119",
+      "district": "Bekasi",
+      "calibration_date": "2024-01-14",
+      "firmware_version": "v2.2.3",
+      "communication_protocol": "4G/LTE",
+      "power_source": "Hybrid",
+      "last_data_transmission": "2024-03-30 20:07:00",
+      "metadata": {
+        "manufacturer": "Q-Free",
+        "model": "RTMS-X",
+        "height_m": 5.0,
+        "lane_coverage": 5,
+        "has_anpr": true,
+        "has_speed_enforcement": false
+      }
+    },
+    {
+      "sensor_id": "SEN-030",
+      "location_name": "Jl. Pluit - Muara Karang",
+      "coordinates": {
+        "latitude": -6.163235,
+        "longitude": 106.816226
+      },
+      "sensor_type": "Inductive Loop",
+      "installation_date": "2020-10-03",
+      "status": "Active",
+      "coverage_direction": "North-East",
+      "detection_range_m": 10,
+      "sampling_rate_seconds": 30,
+      "road_segment_id": "RD-0054",
+      "district": "Sunter",
+      "calibration_date": "2024-02-12",
+      "firmware_version": "v2.1.0",
+      "communication_protocol": "5G",
+      "power_source": "Grid",
+      "last_data_transmission": "2024-03-30 07:18:00",
+      "metadata": {
+        "manufacturer": "Efkon",
+        "model": "TMS-2000",
+        "height_m": 5.4,
+        "lane_coverage": 4,
+        "has_anpr": false,
+        "has_speed_enforcement": false
+      }
+    },
+    {
+      "sensor_id": "SEN-031",
+      "location_name": "Jl. Pantai Indah Kapuk - PIK",
+      "coordinates": {
+        "latitude": -6.328025,
+        "longitude": 106.77199
+      },
+      "sensor_type": "Infrared",
+      "installation_date": "2022-02-23",
+      "status": "Maintenance",
+      "coverage_direction": "North",
+      "detection_range_m": 10,
+      "sampling_rate_seconds": 300,
+      "road_segment_id": "RD-0192",
+      "district": "Cakung",
+      "calibration_date": "2024-01-23",
+      "firmware_version": "v3.0.1",
+      "communication_protocol": "4G/LTE",
+      "power_source": "Grid",
+      "last_data_transmission": "2024-03-30 20:00:00",
+      "metadata": {
+        "manufacturer": "Q-Free",
+        "model": "X-Stream",
+        "height_m": 4.7,
+        "lane_coverage": 2,
+        "has_anpr": true,
+        "has_speed_enforcement": true
+      }
+    },
+    {
+      "sensor_id": "SEN-032",
+      "location_name": "Jl. Boulevard Raya - Kelapa Gading",
+      "coordinates": {
+        "latitude": -6.274096,
+        "longitude": 106.809074
+      },
+      "sensor_type": "Inductive Loop",
+      "installation_date": "2023-02-13",
+      "status": "Active",
+      "coverage_direction": "West",
+      "detection_range_m": 30,
+      "sampling_rate_seconds": 30,
+      "road_segment_id": "RD-0040",
+      "district": "PIK",
+      "calibration_date": "2024-03-06",
+      "firmware_version": "v3.2.5",
+      "communication_protocol": "4G/LTE",
+      "power_source": "Grid",
+      "last_data_transmission": "2024-03-30 16:36:00",
+      "metadata": {
+        "manufacturer": "Swarco",
+        "model": "TrafiRadar",
+        "height_m": 5.0,
+        "lane_coverage": 1,
+        "has_anpr": true,
+        "has_speed_enforcement": true
+      }
+    },
+    {
+      "sensor_id": "SEN-033",
+      "location_name": "Jl. Kelapa Gading Boulevard",
+      "coordinates": {
+        "latitude": -6.199113,
+        "longitude": 106.782306
+      },
+      "sensor_type": "Lidar",
+      "installation_date": "2022-12-04",
+      "status": "Active",
+      "coverage_direction": "East",
+      "detection_range_m": 10,
+      "sampling_rate_seconds": 60,
+      "road_segment_id": "RD-0156",
+      "district": "Blok M",
+      "calibration_date": "2024-03-03",
+      "firmware_version": "v3.1.0",
+      "communication_protocol": "WiFi",
+      "power_source": "Solar Panel",
+      "last_data_transmission": "2024-03-30 10:55:00",
+      "metadata": {
+        "manufacturer": "Kapsch",
+        "model": "TMS-2000",
+        "height_m": 4.6,
+        "lane_coverage": 6,
+        "has_anpr": false,
+        "has_speed_enforcement": true
+      }
+    },
+    {
+      "sensor_id": "SEN-034",
+      "location_name": "Jl. Perintis Kemerdekaan - Cakung",
+      "coordinates": {
+        "latitude": -6.142652,
+        "longitude": 106.706071
+      },
+      "sensor_type": "Infrared",
+      "installation_date": "2022-04-14",
+      "status": "Active",
+      "coverage_direction": "North-East",
+      "detection_range_m": 5,
+      "sampling_rate_seconds": 30,
+      "road_segment_id": "RD-0104",
+      "district": "Kuningan",
+      "calibration_date": "2023-11-20",
+      "firmware_version": "v2.1.0",
+      "communication_protocol": "WiFi",
+      "power_source": "Grid",
+      "last_data_transmission": "2024-03-30 14:56:00",
+      "metadata": {
+        "manufacturer": "Kapsch",
+        "model": "SmartSensor HD",
+        "height_m": 7.7,
+        "lane_coverage": 6,
+        "has_anpr": false,
+        "has_speed_enforcement": false
+      }
+    },
+    {
+      "sensor_id": "SEN-035",
+      "location_name": "Jl. I Gusti Ngurah Rai - Cilincing",
+      "coordinates": {
+        "latitude": -6.204735,
+        "longitude": 106.750524
+      },
+      "sensor_type": "Inductive Loop",
+      "installation_date": "2021-08-06",
+      "status": "Maintenance",
+      "coverage_direction": "West",
+      "detection_range_m": 20,
+      "sampling_rate_seconds": 60,
+      "road_segment_id": "RD-0111",
+      "district": "Cawang",
+      "calibration_date": "2024-03-10",
+      "firmware_version": "v2.2.3",
+      "communication_protocol": "4G/LTE",
+      "power_source": "Hybrid",
+      "last_data_transmission": "2024-03-30 10:42:00",
+      "metadata": {
+        "manufacturer": "Q-Free",
+        "model": "TMS-2000",
+        "height_m": 6.9,
+        "lane_coverage": 2,
+        "has_anpr": false,
+        "has_speed_enforcement": false
+      }
+    },
+    {
+      "sensor_id": "SEN-036",
+      "location_name": "Jl. Yos Sudarso - Sunter",
+      "coordinates": {
+        "latitude": -6.22345,
+        "longitude": 106.788278
+      },
+      "sensor_type": "Inductive Loop",
+      "installation_date": "2023-02-17",
+      "status": "Active",
+      "coverage_direction": "North-East",
+      "detection_range_m": 30,
+      "sampling_rate_seconds": 30,
+      "road_segment_id": "RD-0055",
+      "district": "Bekasi",
+      "calibration_date": "2023-12-27",
+      "firmware_version": "v3.2.5",
+      "communication_protocol": "5G",
+      "power_source": "Grid",
+      "last_data_transmission": "2024-03-30 23:08:00",
+      "metadata": {
+        "manufacturer": "Q-Free",
+        "model": "TrafiRadar",
+        "height_m": 7.9,
+        "lane_coverage": 3,
+        "has_anpr": false,
+        "has_speed_enforcement": true
+      }
+    },
+    {
+      "sensor_id": "SEN-037",
+      "location_name": "Jl. Tendean - Mampang",
+      "coordinates": {
+        "latitude": -6.256629,
+        "longitude": 106.895713
+      },
+      "sensor_type": "Radar",
+      "installation_date": "2021-09-19",
+      "status": "Active",
+      "coverage_direction": "North-East",
+      "detection_range_m": 5,
+      "sampling_rate_seconds": 60,
+      "road_segment_id": "RD-0004",
+      "district": "Kuningan",
+      "calibration_date": "2024-01-05",
+      "firmware_version": "v2.2.3",
+      "communication_protocol": "4G/LTE",
+      "power_source": "Grid",
+      "last_data_transmission": "2024-03-30 12:51:00",
+      "metadata": {
+        "manufacturer": "Efkon",
+        "model": "SmartSensor HD",
+        "height_m": 5.7,
+        "lane_coverage": 5,
+        "has_anpr": false,
+        "has_speed_enforcement": false
+      }
+    },
+    {
+      "sensor_id": "SEN-038",
+      "location_name": "Jl. Wolter Monginsidi - Kebayoran Baru",
+      "coordinates": {
+        "latitude": -6.220114,
+        "longitude": 106.865847
+      },
+      "sensor_type": "Camera",
+      "installation_date": "2023-01-04",
+      "status": "Active",
+      "coverage_direction": "North",
+      "detection_range_m": 15,
+      "sampling_rate_seconds": 300,
+      "road_segment_id": "RD-0146",
+      "district": "Slipi",
+      "calibration_date": "2024-02-25",
+      "firmware_version": "v3.1.0",
+      "communication_protocol": "WiFi",
+      "power_source": "Solar Panel",
+      "last_data_transmission": "2024-03-30 18:01:00",
+      "metadata": {
+        "manufacturer": "Q-Free",
+        "model": "SmartSensor HD",
+        "height_m": 6.0,
+        "lane_coverage": 3,
+        "has_anpr": true,
+        "has_speed_enforcement": false
+      }
+    },
+    {
+      "sensor_id": "SEN-039",
+      "location_name": "Jl. Suryo - Senopati",
+      "coordinates": {
+        "latitude": -6.161325,
+        "longitude": 106.978698
+      },
+      "sensor_type": "Lidar",
+      "installation_date": "2023-02-07",
+      "status": "Active",
+      "coverage_direction": "South",
+      "detection_range_m": 20,
+      "sampling_rate_seconds": 30,
+      "road_segment_id": "RD-0106",
+      "district": "Cibubur",
+      "calibration_date": "2023-11-10",
+      "firmware_version": "v2.2.3",
+      "communication_protocol": "5G",
+      "power_source": "Battery",
+      "last_data_transmission": "2024-03-30 14:12:00",
+      "metadata": {
+        "manufacturer": "Kapsch",
+        "model": "SmartSensor HD",
+        "height_m": 7.1,
+        "lane_coverage": 6,
+        "has_anpr": false,
+        "has_speed_enforcement": true
+      }
+    },
+    {
+      "sensor_id": "SEN-040",
+      "location_name": "Jl. Senopati - Kebayoran Baru",
+      "coordinates": {
+        "latitude": -6.114532,
+        "longitude": 106.932861
+      },
+      "sensor_type": "Radar",
+      "installation_date": "2021-02-24",
+      "status": "Offline",
+      "coverage_direction": "North",
+      "detection_range_m": 20,
+      "sampling_rate_seconds": 60,
+      "road_segment_id": "RD-0103",
+      "district": "Sunter",
+      "calibration_date": "2023-10-17",
+      "firmware_version": "v3.2.5",
+      "communication_protocol": "4G/LTE",
+      "power_source": "Grid",
+      "last_data_transmission": "2024-03-30 01:56:00",
+      "metadata": {
+        "manufacturer": "Swarco",
+        "model": "X-Stream",
+        "height_m": 7.8,
+        "lane_coverage": 6,
+        "has_anpr": true,
+        "has_speed_enforcement": true
+      }
+    },
+    {
+      "sensor_id": "SEN-041",
+      "location_name": "Jl. Trunojoyo - Kebayoran",
+      "coordinates": {
+        "latitude": -6.309729,
+        "longitude": 106.733502
+      },
+      "sensor_type": "Infrared",
+      "installation_date": "2022-08-01",
+      "status": "Active",
+      "coverage_direction": "South",
+      "detection_range_m": 5,
+      "sampling_rate_seconds": 60,
+      "road_segment_id": "RD-0075",
+      "district": "Tangerang",
+      "calibration_date": "2023-12-19",
+      "firmware_version": "v2.1.0",
+      "communication_protocol": "Fiber",
+      "power_source": "Grid",
+      "last_data_transmission": "2024-03-30 15:47:00",
+      "metadata": {
+        "manufacturer": "Kapsch",
+        "model": "TMS-2000",
+        "height_m": 6.6,
+        "lane_coverage": 2,
+        "has_anpr": true,
+        "has_speed_enforcement": true
+      }
+    },
+    {
+      "sensor_id": "SEN-042",
+      "location_name": "Jl. Kemang Raya - Bangka",
+      "coordinates": {
+        "latitude": -6.10176,
+        "longitude": 106.932798
+      },
+      "sensor_type": "Inductive Loop",
+      "installation_date": "2023-03-12",
+      "status": "Active",
+      "coverage_direction": "South",
+      "detection_range_m": 5,
+      "sampling_rate_seconds": 60,
+      "road_segment_id": "RD-0164",
+      "district": "Slipi",
+      "calibration_date": "2023-12-09",
+      "firmware_version": "v3.0.1",
+      "communication_protocol": "5G",
+      "power_source": "Battery",
+      "last_data_transmission": "2024-03-30 13:30:00",
+      "metadata": {
+        "manufacturer": "Kapsch",
+        "model": "TMS-2000",
+        "height_m": 6.6,
+        "lane_coverage": 5,
+        "has_anpr": false,
+        "has_speed_enforcement": false
+      }
+    },
+    {
+      "sensor_id": "SEN-043",
+      "location_name": "Jl. Warung Buncit - Pejaten",
+      "coordinates": {
+        "latitude": -6.184785,
+        "longitude": 106.865592
+      },
+      "sensor_type": "Lidar",
+      "installation_date": "2021-02-01",
+      "status": "Active",
+      "coverage_direction": "South",
+      "detection_range_m": 50,
+      "sampling_rate_seconds": 300,
+      "road_segment_id": "RD-0117",
+      "district": "Cakung",
+      "calibration_date": "2023-11-13",
+      "firmware_version": "v2.2.3",
+      "communication_protocol": "Fiber",
+      "power_source": "Solar Panel",
+      "last_data_transmission": "2024-03-30 02:40:00",
+      "metadata": {
+        "manufacturer": "Q-Free",
+        "model": "RTMS-X",
+        "height_m": 4.8,
+        "lane_coverage": 4,
+        "has_anpr": true,
+        "has_speed_enforcement": true
+      }
+    },
+    {
+      "sensor_id": "SEN-044",
+      "location_name": "Jl. Kalibata - Jati Padang",
+      "coordinates": {
+        "latitude": -6.208782,
+        "longitude": 106.959365
+      },
+      "sensor_type": "Lidar",
+      "installation_date": "2022-02-23",
+      "status": "Active",
+      "coverage_direction": "North-East",
+      "detection_range_m": 5,
+      "sampling_rate_seconds": 30,
+      "road_segment_id": "RD-0073",
+      "district": "Kuningan",
+      "calibration_date": "2023-12-18",
+      "firmware_version": "v3.0.1",
+      "communication_protocol": "LoRaWAN",
+      "power_source": "Battery",
+      "last_data_transmission": "2024-03-30 17:14:00",
+      "metadata": {
+        "manufacturer": "Swarco",
+        "model": "X-Stream",
+        "height_m": 5.9,
+        "lane_coverage": 5,
+        "has_anpr": false,
+        "has_speed_enforcement": false
+      }
+    },
+    {
+      "sensor_id": "SEN-045",
+      "location_name": "Jl. Pasar Minggu - Lenteng Agung",
+      "coordinates": {
+        "latitude": -6.233759,
+        "longitude": 106.988614
+      },
+      "sensor_type": "Camera",
+      "installation_date": "2022-11-09",
+      "status": "Active",
+      "coverage_direction": "West",
+      "detection_range_m": 30,
+      "sampling_rate_seconds": 30,
+      "road_segment_id": "RD-0141",
+      "district": "Cibubur",
+      "calibration_date": "2024-03-08",
+      "firmware_version": "v2.1.0",
+      "communication_protocol": "LoRaWAN",
+      "power_source": "Grid",
+      "last_data_transmission": "2024-03-30 02:12:00",
+      "metadata": {
+        "manufacturer": "Kapsch",
+        "model": "TrafiRadar",
+        "height_m": 6.5,
+        "lane_coverage": 4,
+        "has_anpr": false,
+        "has_speed_enforcement": true
+      }
+    },
+    {
+      "sensor_id": "SEN-046",
+      "location_name": "Jl. OTT - Cipayung",
+      "coordinates": {
+        "latitude": -6.348705,
+        "longitude": 106.903978
+      },
+      "sensor_type": "Camera",
+      "installation_date": "2021-04-05",
+      "status": "Offline",
+      "coverage_direction": "West",
+      "detection_range_m": 10,
+      "sampling_rate_seconds": 120,
+      "road_segment_id": "RD-0063",
+      "district": "Mangga Dua",
+      "calibration_date": "2024-01-06",
+      "firmware_version": "v3.2.5",
+      "communication_protocol": "5G",
+      "power_source": "Grid",
+      "last_data_transmission": "2024-03-30 04:35:00",
+      "metadata": {
+        "manufacturer": "Kapsch",
+        "model": "TMS-2000",
+        "height_m": 7.1,
+        "lane_coverage": 1,
+        "has_anpr": true,
+        "has_speed_enforcement": false
+      }
+    },
+    {
+      "sensor_id": "SEN-047",
+      "location_name": "Jl. Raya Condet - Balekambang",
+      "coordinates": {
+        "latitude": -6.119198,
+        "longitude": 106.808586
+      },
+      "sensor_type": "Camera",
+      "installation_date": "2021-05-22",
+      "status": "Active",
+      "coverage_direction": "North-East",
+      "detection_range_m": 5,
+      "sampling_rate_seconds": 300,
+      "road_segment_id": "RD-0046",
+      "district": "Cibubur",
+      "calibration_date": "2024-01-04",
+      "firmware_version": "v3.1.0",
+      "communication_protocol": "5G",
+      "power_source": "Grid",
+      "last_data_transmission": "2024-03-30 10:20:00",
+      "metadata": {
+        "manufacturer": "Efkon",
+        "model": "X-Stream",
+        "height_m": 7.8,
+        "lane_coverage": 2,
+        "has_anpr": true,
+        "has_speed_enforcement": false
+      }
+    },
+    {
+      "sensor_id": "SEN-048",
+      "location_name": "Jl. Bypass - Cibubur",
+      "coordinates": {
+        "latitude": -6.116785,
+        "longitude": 106.714863
+      },
+      "sensor_type": "Radar",
+      "installation_date": "2023-06-04",
+      "status": "Offline",
+      "coverage_direction": "North",
+      "detection_range_m": 15,
+      "sampling_rate_seconds": 300,
+      "road_segment_id": "RD-0102",
+      "district": "Depok",
+      "calibration_date": "2023-12-31",
+      "firmware_version": "v3.2.5",
+      "communication_protocol": "WiFi",
+      "power_source": "Grid",
+      "last_data_transmission": "2024-03-30 09:46:00",
+      "metadata": {
+        "manufacturer": "Q-Free",
+        "model": "RTMS-X",
+        "height_m": 4.6,
+        "lane_coverage": 2,
+        "has_anpr": true,
+        "has_speed_enforcement": true
+      }
+    },
+    {
+      "sensor_id": "SEN-049",
+      "location_name": "Jl. Alternatif Cibubur - Depok",
+      "coordinates": {
+        "latitude": -6.207493,
+        "longitude": 106.766529
+      },
+      "sensor_type": "Radar",
+      "installation_date": "2021-04-14",
+      "status": "Maintenance",
+      "coverage_direction": "South",
+      "detection_range_m": 10,
+      "sampling_rate_seconds": 60,
+      "road_segment_id": "RD-0151",
+      "district": "Sudirman",
+      "calibration_date": "2024-03-13",
+      "firmware_version": "v3.0.1",
+      "communication_protocol": "4G/LTE",
+      "power_source": "Solar Panel",
+      "last_data_transmission": "2024-03-30 18:50:00",
+      "metadata": {
+        "manufacturer": "Efkon",
+        "model": "TrafiRadar",
+        "height_m": 7.1,
+        "lane_coverage": 6,
+        "has_anpr": false,
+        "has_speed_enforcement": false
+      }
+    },
+    {
+      "sensor_id": "SEN-050",
+      "location_name": "Jl. Raya Bogor - Citereup",
+      "coordinates": {
+        "latitude": -6.287616,
+        "longitude": 106.973461
+      },
+      "sensor_type": "Infrared",
+      "installation_date": "2023-04-05",
+      "status": "Active",
+      "coverage_direction": "North",
+      "detection_range_m": 20,
+      "sampling_rate_seconds": 60,
+      "road_segment_id": "RD-0119",
+      "district": "Cawang",
+      "calibration_date": "2023-11-22",
+      "firmware_version": "v2.1.0",
+      "communication_protocol": "5G",
+      "power_source": "Solar Panel",
+      "last_data_transmission": "2024-03-30 08:57:00",
+      "metadata": {
+        "manufacturer": "Q-Free",
+        "model": "SmartSensor HD",
+        "height_m": 7.3,
+        "lane_coverage": 5,
+        "has_anpr": true,
+        "has_speed_enforcement": true
+      }
+    }
+  ]
+}
