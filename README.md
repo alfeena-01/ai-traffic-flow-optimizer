@@ -40,7 +40,7 @@ Add more features (time of day, weather conditions)
 
 Implement route optimization (Dijkstra’s algorithm with networkx)
 
-Build a Streamlit dashboard for interactive visualization
+Build a Streamlit dashboard for interactive visualization.
 
 ⚖️ License
 
