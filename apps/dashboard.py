@@ -31,3 +31,7 @@ prediction = model.predict(sample)[0]
 
 st.subheader("🔮 Traffic Prediction")
 st.write(f"Predicted Vehicle Count: {prediction:.0f}")
+
+st.subheader("📊 Model Metrics")
+st.write(f"MAE: {model.metrics_['mae']:.2f}")
+st.write(f"R2 Score: {model.metrics_['r2']:.2f}")
