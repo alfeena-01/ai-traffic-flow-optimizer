@@ -80,5 +80,4 @@ if uploaded_file:
 else:
     st.info("Please upload a traffic dataset to begin.")
 
-import joblib
-model = joblib.load("../models/traffic_model.pkl")
+
