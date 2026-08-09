@@ -7,15 +7,36 @@ model = joblib.load("../models/traffic_model.pkl")
 
 st.title("🚦 AI Traffic Flow Optimizer Dashboard")
 
-# Sidebar inputs
+# --- Load datasets for defaults ---
+traffic_data = pd.read_csv("../data/traffic_sensor_data.csv")
+weather_data = pd.read_csv("../data/weather_conditions.csv")
+
+# Convert timestamps
+traffic_data["timestamp"] = pd.to_datetime(traffic_data["timestamp"])
+weather_data["timestamp"] = pd.to_datetime(weather_data["timestamp"])
+
+# Merge traffic + weather
+merged = traffic_data.merge(weather_data, on="timestamp", how="left")
+
+# Compute averages for defaults
+avg_speed = merged["average_speed_kmh"].mean()
+avg_precip = merged["precipitation_mm"].mean()
+avg_visib = merged["visibility_km"].mean()
+
+# Compute lag defaults (last 2 values)
+lag1 = merged["vehicle_count"].iloc[-1]
+lag2 = merged["vehicle_count"].iloc[-2]
+
+# --- Sidebar inputs ---
 hour = st.sidebar.slider("Hour of Day", 0, 23, 8)
 day_of_week = st.sidebar.slider("Day of Week (0=Mon, 6=Sun)", 0, 6, 0)
 is_weekend = 1 if day_of_week in [5,6] else 0
-speed = st.sidebar.number_input("Average Speed (km/h)", value=40)
-precipitation = st.sidebar.number_input("Precipitation (mm)", value=0.0)
-visibility = st.sidebar.number_input("Visibility (km)", value=10.0)
 
-# Build input row
+speed = st.sidebar.number_input("Average Speed (km/h)", value=float(avg_speed))
+precipitation = st.sidebar.number_input("Precipitation (mm)", value=float(avg_precip))
+visibility = st.sidebar.number_input("Visibility (km)", value=float(avg_visib))
+
+# --- Build input row ---
 sample = pd.DataFrame({
     "hour": [hour],
     "day_of_week": [day_of_week],
@@ -23,15 +44,14 @@ sample = pd.DataFrame({
     "average_speed_kmh": [speed],
     "precipitation_mm": [precipitation],
     "visibility_km": [visibility],
-    "vehicle_count_lag1": [100],  # placeholder
-    "vehicle_count_lag2": [95]
+    "vehicle_count_lag1": [lag1],
+    "vehicle_count_lag2": [lag2]
 })
 
+# --- Prediction ---
 prediction = model.predict(sample)[0]
 
 st.subheader("🔮 Traffic Prediction")
-st.write(f"Predicted Vehicle Count: {prediction:.0f}")
-
-st.subheader("📊 Model Metrics")
-st.write(f"MAE: {model.metrics_['mae']:.2f}")
-st.write(f"R2 Score: {model.metrics_['r2']:.2f}")
+st.write(f"**Hour:** {hour}:00")
+st.write(f"**Day of Week:** {day_of_week} ({'Weekend' if is_weekend else 'Weekday'})")
+st.write(f"**Predicted Vehicle Count:** {prediction:.0f}")
