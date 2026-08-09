@@ -79,3 +79,6 @@ if uploaded_file:
     st.sidebar.write(f"**Predicted Vehicle Count:** {prediction:.0f}")
 else:
     st.info("Please upload a traffic dataset to begin.")
+
+import joblib
+model = joblib.load("../models/traffic_model.pkl")
