@@ -1,15 +1,21 @@
-import streamlit as st
-import pandas as pd
+import os
 import joblib
+import pandas as pd
+import streamlit as st
+
+# Resolve project root relative to this file
+BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+MODEL_PATH = os.path.join(BASE_DIR, "models", "traffic_model.pkl")
+DATA_PATH = os.path.join(BASE_DIR, "data")
 
 # Load pre-trained model
-model = joblib.load("../models/traffic_model.pkl")
+model = joblib.load(MODEL_PATH)
 
 st.title("🚦 AI Traffic Flow Optimizer Dashboard")
 
 # --- Load datasets for defaults ---
-traffic_data = pd.read_csv("../data/traffic_sensor_data.csv")
-weather_data = pd.read_csv("../data/weather_conditions.csv")
+traffic_data = pd.read_csv(os.path.join(DATA_PATH, "traffic_sensor_data.csv"))
+weather_data = pd.read_csv(os.path.join(DATA_PATH, "weather_conditions.csv"))
 
 # Convert timestamps
 traffic_data["timestamp"] = pd.to_datetime(traffic_data["timestamp"])
@@ -30,7 +36,7 @@ lag2 = merged["vehicle_count"].iloc[-2]
 # --- Sidebar inputs ---
 hour = st.sidebar.slider("Hour of Day", 0, 23, 8)
 day_of_week = st.sidebar.slider("Day of Week (0=Mon, 6=Sun)", 0, 6, 0)
-is_weekend = 1 if day_of_week in [5,6] else 0
+is_weekend = 1 if day_of_week in [5, 6] else 0
 
 speed = st.sidebar.number_input("Average Speed (km/h)", value=float(avg_speed))
 precipitation = st.sidebar.number_input("Precipitation (mm)", value=float(avg_precip))
