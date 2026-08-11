@@ -25,11 +25,19 @@ with open(os.path.join(DATA_PATH, "sensor_locations.json")) as f:
 
 # IMPORTANT: check what "sensors" contains
 # If it's already a list of dicts with lat/lon:
-locations = pd.DataFrame(sensor_data["sensors"])
+# --- Load sensor locations ---
+with open(os.path.join(DATA_PATH, "sensor_locations.json")) as f:
+    sensor_data = json.load(f)
 
-# If lat/lon are named differently (e.g. "lat","lng"), rename them:
-if "lat" in locations.columns and "lng" in locations.columns:
-    locations.rename(columns={"lat": "latitude", "lng": "longitude"}, inplace=True)
+# Flatten nested coordinates into columns
+locations = pd.json_normalize(sensor_data["sensors"])
+
+# Rename for consistency
+locations.rename(columns={
+    "coordinates.latitude": "latitude",
+    "coordinates.longitude": "longitude",
+    "location_name": "location"
+}, inplace=True)
 
 # --- Merge traffic + weather + locations ---
 traffic_data["timestamp"] = pd.to_datetime(traffic_data["timestamp"])
