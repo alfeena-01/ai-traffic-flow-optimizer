@@ -61,3 +61,34 @@ st.subheader("🔮 Traffic Prediction")
 st.write(f"**Hour:** {hour}:00")
 st.write(f"**Day of Week:** {day_of_week} ({'Weekend' if is_weekend else 'Weekday'})")
 st.write(f"**Predicted Vehicle Count:** {prediction:.0f}")
+
+import pydeck as pdk
+import streamlit as st
+
+st.title("🚦 Traffic Heatmap")
+
+# Sidebar filter for hour of day
+traffic["timestamp"] = pd.to_datetime(traffic["timestamp"])
+traffic["hour"] = traffic["timestamp"].dt.hour
+selected_hour = st.sidebar.slider("Select Hour", 0, 23, 8)
+
+traffic_filtered = traffic[traffic["hour"] == selected_hour]
+
+# Heatmap layer
+heatmap_layer = pdk.Layer(
+    "HeatmapLayer",
+    data=traffic_filtered,
+    get_position=["longitude", "latitude"],
+    get_weight="vehicle_count",   # or "predicted_count" if using your ML model
+    radiusPixels=60,
+)
+
+# Center map on dataset
+view_state = pdk.ViewState(
+    latitude=traffic_filtered["latitude"].mean(),
+    longitude=traffic_filtered["longitude"].mean(),
+    zoom=11,
+    pitch=0,
+)
+
+st.pydeck_chart(pdk.Deck(layers=[heatmap_layer], initial_view_state=view_state))
