@@ -2,6 +2,7 @@ import os
 import joblib
 import pandas as pd
 import streamlit as st
+import pydeck as pdk
 
 # Resolve project root relative to this file
 BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
