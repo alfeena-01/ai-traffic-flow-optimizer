@@ -22,7 +22,14 @@ weather_data = pd.read_csv(os.path.join(DATA_PATH, "weather_conditions.csv"))
 # --- Load sensor locations ---
 with open(os.path.join(DATA_PATH, "sensor_locations.json")) as f:
     sensor_data = json.load(f)
+
+# IMPORTANT: check what "sensors" contains
+# If it's already a list of dicts with lat/lon:
 locations = pd.DataFrame(sensor_data["sensors"])
+
+# If lat/lon are named differently (e.g. "lat","lng"), rename them:
+if "lat" in locations.columns and "lng" in locations.columns:
+    locations.rename(columns={"lat": "latitude", "lng": "longitude"}, inplace=True)
 
 # --- Merge traffic + weather + locations ---
 traffic_data["timestamp"] = pd.to_datetime(traffic_data["timestamp"])
@@ -73,19 +80,23 @@ traffic["hour"] = traffic["timestamp"].dt.hour
 selected_hour = st.sidebar.slider("Select Hour for Heatmap", 0, 23, 8)
 traffic_filtered = traffic[traffic["hour"] == selected_hour]
 
-heatmap_layer = pdk.Layer(
-    "HeatmapLayer",
-    data=traffic_filtered,
-    get_position=["longitude", "latitude"],
-    get_weight="vehicle_count",   # swap with "predicted_count" if you add predictions
-    radiusPixels=60,
-)
+# Only proceed if lat/lon exist
+if "latitude" in traffic_filtered.columns and "longitude" in traffic_filtered.columns:
+    heatmap_layer = pdk.Layer(
+        "HeatmapLayer",
+        data=traffic_filtered.dropna(subset=["latitude", "longitude"]),
+        get_position=["longitude", "latitude"],
+        get_weight="vehicle_count",
+        radiusPixels=60,
+    )
 
-view_state = pdk.ViewState(
-    latitude=traffic_filtered["latitude"].mean(),
-    longitude=traffic_filtered["longitude"].mean(),
-    zoom=11,
-    pitch=0,
-)
+    view_state = pdk.ViewState(
+        latitude=traffic_filtered["latitude"].mean(),
+        longitude=traffic_filtered["longitude"].mean(),
+        zoom=11,
+        pitch=0,
+    )
 
-st.pydeck_chart(pdk.Deck(layers=[heatmap_layer], initial_view_state=view_state))
+    st.pydeck_chart(pdk.Deck(layers=[heatmap_layer], initial_view_state=view_state))
+else:
+    st.warning("⚠️ No latitude/longitude data found in sensor_locations.json. Please add coordinates.")
