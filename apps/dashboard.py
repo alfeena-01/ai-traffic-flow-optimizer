@@ -62,8 +62,7 @@ st.write(f"**Hour:** {hour}:00")
 st.write(f"**Day of Week:** {day_of_week} ({'Weekend' if is_weekend else 'Weekday'})")
 st.write(f"**Predicted Vehicle Count:** {prediction:.0f}")
 
-import pydeck as pdk
-import streamlit as st
+
 
 st.title("🚦 Traffic Heatmap")
 
