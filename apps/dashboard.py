@@ -167,3 +167,8 @@ heatmap_layer = pdk.Layer(
 )
 selected_date = st.sidebar.date_input("Select Date", traffic["timestamp"].dt.date.min())
 traffic_filtered = traffic[traffic["timestamp"].dt.date == selected_date]
+col1, col2 = st.columns(2)
+with col1:
+    st.metric("Predicted Vehicle Count", f"{prediction:.0f}")
+with col2:
+    st.metric("Average Speed (km/h)", f"{speed:.1f}")
