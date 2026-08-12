@@ -165,3 +165,5 @@ heatmap_layer = pdk.Layer(
     get_weight=weight_col,
     radiusPixels=60,
 )
+selected_date = st.sidebar.date_input("Select Date", traffic["timestamp"].dt.date.min())
+traffic_filtered = traffic[traffic["timestamp"].dt.date == selected_date]
