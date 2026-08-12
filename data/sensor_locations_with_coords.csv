@@ -1,0 +1,51 @@
+sensor_id,location,sensor_type,installation_date,status,coverage_direction,detection_range_m,sampling_rate_seconds,road_segment_id,district,calibration_date,firmware_version,communication_protocol,power_source,last_data_transmission,latitude,longitude,metadata.manufacturer,metadata.model,metadata.height_m,metadata.lane_coverage,metadata.has_anpr,metadata.has_speed_enforcement
+SEN-001,Jl. Sudirman - Bundaran HI,Camera,2021-03-17,Active,East,15,300,RD-0126,Cakung,2023-12-13,v2.2.3,LoRaWAN,Hybrid,2024-03-30 10:56:00,-6.337762,106.853379,Siemens,X-Stream,5.8,3,True,True
+SEN-002,Jl. Thamrin - Monas,Lidar,2021-03-19,Active,West,50,120,RD-0151,Pluit,2023-10-29,v3.0.1,WiFi,Hybrid,2024-03-30 14:37:00,-6.140999,106.792419,Siemens,X-Stream,7.0,3,False,False
+SEN-003,Jl. Gatot Subroto - Kuningan,Infrared,2023-02-16,Active,South-West,20,60,RD-0012,Senayan,2024-03-10,v3.2.5,4G/LTE,Grid,2024-03-30 14:05:00,-6.227011,106.738791,Q-Free,RTMS-X,7.1,4,False,False
+SEN-004,Jl. Rasuna Said - Setiabudi,Camera,2021-09-01,Active,North-East,15,30,RD-0087,Pluit,2023-11-20,v3.2.5,4G/LTE,Solar Panel,2024-03-30 21:46:00,-6.186329,106.744133,Q-Free,X-Stream,6.5,3,False,True
+SEN-005,Jl. HR Rasuna Said - Casablanca,Lidar,2022-03-02,Active,South-West,30,120,RD-0143,Mangga Dua,2024-01-08,v3.2.5,5G,Battery,2024-03-30 08:55:00,-6.245345,106.974337,Swarco,SmartSensor HD,7.8,5,False,True
+SEN-006,Jl. Satrio - Mega Kuningan,Lidar,2023-04-12,Active,North-East,50,60,RD-0032,Sudirman,2024-03-27,v2.1.0,LoRaWAN,Grid,2024-03-30 12:50:00,-6.23058,106.806626,Kapsch,SmartSensor HD,5.8,5,False,True
+SEN-007,Jl. Jend. Sudirman - Semanggi,Camera,2022-07-07,Active,East,10,300,RD-0140,PIK,2023-10-12,v3.2.5,5G,Grid,2024-03-30 14:42:00,-6.293613,106.7379,Siemens,TMS-2000,6.1,3,True,False
+SEN-008,Jl. Asia Afrika - Gelora Bung Karno,Inductive Loop,2022-07-26,Active,South-West,5,60,RD-0108,Pluit,2023-10-28,v2.1.0,WiFi,Battery,2024-03-30 06:27:00,-6.200007,106.958717,Siemens,RTMS-X,6.6,3,False,True
+SEN-009,Jl. Jend. Gatot Subroto - Slipi,Infrared,2020-09-27,Active,South-West,20,300,RD-0125,Grogol,2024-01-09,v2.2.3,Fiber,Grid,2024-03-30 21:28:00,-6.207188,106.700424,Kapsch,TrafiRadar,4.7,5,False,False
+SEN-010,Jl. MT Haryono - Cawang,Radar,2023-03-27,Active,North-East,20,30,RD-0014,Bekasi,2023-12-05,v3.1.0,Fiber,Battery,2024-03-30 18:15:00,-6.139249,106.791569,Siemens,SmartSensor HD,6.6,5,False,False
+SEN-011,Jl. Casablanca - Kampung Melayu,Inductive Loop,2021-03-24,Active,South,5,120,RD-0176,PIK,2024-03-02,v2.1.0,LoRaWAN,Solar Panel,2024-03-30 22:16:00,-6.141405,106.828384,Kapsch,RTMS-X,5.3,4,False,True
+SEN-012,Jl. Pemuda - Senen,Camera,2022-04-02,Active,North,50,300,RD-0108,Cakung,2024-01-05,v2.2.3,4G/LTE,Grid,2024-03-30 06:52:00,-6.328957,106.84183,Q-Free,TMS-2000,7.3,5,True,True
+SEN-013,Jl. Gajah Mada - Mangga Dua,Camera,2022-01-22,Active,South,20,120,RD-0028,Menteng,2024-01-18,v3.2.5,5G,Solar Panel,2024-03-30 13:36:00,-6.171103,106.965013,Siemens,TMS-2000,7.6,6,False,False
+SEN-014,Jl. Hayam Wuruk - Harmoni,Inductive Loop,2023-02-08,Active,East,50,60,RD-0036,Bekasi,2023-10-16,v2.2.3,LoRaWAN,Solar Panel,2024-03-30 09:59:00,-6.331333,106.70249,Q-Free,X-Stream,7.4,3,False,True
+SEN-015,Jl. KS Tubun - Slipi,Camera,2022-01-26,Active,South-West,5,120,RD-0155,Pluit,2024-01-06,v2.1.0,WiFi,Grid,2024-03-30 07:05:00,-6.284764,106.859721,Siemens,TrafiRadar,5.1,6,False,True
+SEN-016,Jl. Proklamasi - Menteng,Camera,2023-05-29,Active,West,30,30,RD-0176,Bekasi,2023-12-12,v3.0.1,4G/LTE,Hybrid,2024-03-30 14:29:00,-6.333568,106.748748,Q-Free,RTMS-X,7.9,4,False,True
+SEN-017,Jl. Diponegoro - Cikini,Infrared,2022-09-13,Maintenance,South,30,300,RD-0037,Kelapa Gading,2024-03-27,v3.1.0,4G/LTE,Solar Panel,2024-03-30 09:37:00,-6.130186,106.804042,Kapsch,SmartSensor HD,4.7,1,False,False
+SEN-018,Jl. Raden Saleh - Salemba,Infrared,2023-05-03,Active,South-West,20,300,RD-0134,Bekasi,2024-02-08,v2.1.0,4G/LTE,Grid,2024-03-30 00:12:00,-6.184257,106.800143,Kapsch,RTMS-X,4.7,1,True,False
+SEN-019,Jl. Kramat Raya - Senen,Infrared,2021-10-29,Active,East,15,300,RD-0064,Pluit,2024-03-02,v2.1.0,5G,Hybrid,2024-03-30 05:58:00,-6.152351,106.900746,Kapsch,X-Stream,7.7,6,False,True
+SEN-020,Jl. Raya Bogor - Cibubur,Radar,2021-10-07,Active,North-East,20,120,RD-0025,Cibubur,2024-03-09,v2.1.0,4G/LTE,Hybrid,2024-03-30 15:44:00,-6.119053,106.848036,Swarco,TrafiRadar,7.0,6,False,True
+SEN-021,Jl. TB Simatupang - Ciracas,Lidar,2023-06-07,Maintenance,South-West,15,300,RD-0143,Cibubur,2024-02-08,v3.1.0,Fiber,Grid,2024-03-30 21:30:00,-6.170331,106.995482,Swarco,TMS-2000,5.8,1,True,False
+SEN-022,Jl. Pondok Indah - Pondok Pinang,Lidar,2021-04-09,Active,South,15,120,RD-0051,Depok,2024-02-29,v2.2.3,LoRaWAN,Solar Panel,2024-03-30 06:35:00,-6.200271,106.78597,Siemens,RTMS-X,6.4,5,False,False
+SEN-023,Jl. Fatmawati - Cipete,Radar,2021-10-04,Active,South,20,120,RD-0148,Cibubur,2024-01-09,v3.1.0,5G,Hybrid,2024-03-30 10:36:00,-6.318071,106.894674,Efkon,SmartSensor HD,6.4,1,True,False
+SEN-024,Jl. Raya Kebayoran - Blok M,Inductive Loop,2021-04-26,Active,North,20,30,RD-0040,Pluit,2024-01-16,v2.1.0,4G/LTE,Battery,2024-03-30 17:14:00,-6.31895,106.813604,Q-Free,TrafiRadar,4.9,3,False,False
+SEN-025,Jl. Metro Pondok Indah - Ciputat,Camera,2022-12-16,Active,West,20,120,RD-0066,Depok,2023-12-13,v3.1.0,4G/LTE,Grid,2024-03-30 13:41:00,-6.226494,106.939068,Kapsch,RTMS-X,7.7,3,True,False
+SEN-026,Jl. Ciledug - Tangerang,Camera,2020-11-07,Active,South,10,60,RD-0049,Sudirman,2024-03-24,v3.0.1,4G/LTE,Solar Panel,2024-03-30 17:46:00,-6.173777,106.733769,Swarco,RTMS-X,8.0,5,True,True
+SEN-027,Jl. Raya Meruya - Kembangan,Infrared,2022-02-18,Active,South,50,60,RD-0143,Senen,2023-10-13,v3.0.1,WiFi,Grid,2024-03-30 00:21:00,-6.120973,106.847165,Siemens,RTMS-X,6.8,2,False,False
+SEN-028,Jl. Daan Mogot - Grogol,Inductive Loop,2022-03-11,Active,North-East,20,60,RD-0155,Kemang,2023-11-09,v3.1.0,WiFi,Solar Panel,2024-03-30 04:30:00,-6.112798,106.865693,Efkon,SmartSensor HD,5.0,1,False,True
+SEN-029,Jl. Raya Kamal - Penjaringan,Infrared,2021-04-10,Active,West,10,60,RD-0119,Bekasi,2024-01-14,v2.2.3,4G/LTE,Hybrid,2024-03-30 20:07:00,-6.313178,106.772004,Q-Free,RTMS-X,5.0,5,True,False
+SEN-030,Jl. Pluit - Muara Karang,Inductive Loop,2020-10-03,Active,North-East,10,30,RD-0054,Sunter,2024-02-12,v2.1.0,5G,Grid,2024-03-30 07:18:00,-6.163235,106.816226,Efkon,TMS-2000,5.4,4,False,False
+SEN-031,Jl. Pantai Indah Kapuk - PIK,Infrared,2022-02-23,Maintenance,North,10,300,RD-0192,Cakung,2024-01-23,v3.0.1,4G/LTE,Grid,2024-03-30 20:00:00,-6.328025,106.77199,Q-Free,X-Stream,4.7,2,True,True
+SEN-032,Jl. Boulevard Raya - Kelapa Gading,Inductive Loop,2023-02-13,Active,West,30,30,RD-0040,PIK,2024-03-06,v3.2.5,4G/LTE,Grid,2024-03-30 16:36:00,-6.274096,106.809074,Swarco,TrafiRadar,5.0,1,True,True
+SEN-033,Jl. Kelapa Gading Boulevard,Lidar,2022-12-04,Active,East,10,60,RD-0156,Blok M,2024-03-03,v3.1.0,WiFi,Solar Panel,2024-03-30 10:55:00,-6.199113,106.782306,Kapsch,TMS-2000,4.6,6,False,True
+SEN-034,Jl. Perintis Kemerdekaan - Cakung,Infrared,2022-04-14,Active,North-East,5,30,RD-0104,Kuningan,2023-11-20,v2.1.0,WiFi,Grid,2024-03-30 14:56:00,-6.142652,106.706071,Kapsch,SmartSensor HD,7.7,6,False,False
+SEN-035,Jl. I Gusti Ngurah Rai - Cilincing,Inductive Loop,2021-08-06,Maintenance,West,20,60,RD-0111,Cawang,2024-03-10,v2.2.3,4G/LTE,Hybrid,2024-03-30 10:42:00,-6.204735,106.750524,Q-Free,TMS-2000,6.9,2,False,False
+SEN-036,Jl. Yos Sudarso - Sunter,Inductive Loop,2023-02-17,Active,North-East,30,30,RD-0055,Bekasi,2023-12-27,v3.2.5,5G,Grid,2024-03-30 23:08:00,-6.22345,106.788278,Q-Free,TrafiRadar,7.9,3,False,True
+SEN-037,Jl. Tendean - Mampang,Radar,2021-09-19,Active,North-East,5,60,RD-0004,Kuningan,2024-01-05,v2.2.3,4G/LTE,Grid,2024-03-30 12:51:00,-6.256629,106.895713,Efkon,SmartSensor HD,5.7,5,False,False
+SEN-038,Jl. Wolter Monginsidi - Kebayoran Baru,Camera,2023-01-04,Active,North,15,300,RD-0146,Slipi,2024-02-25,v3.1.0,WiFi,Solar Panel,2024-03-30 18:01:00,-6.220114,106.865847,Q-Free,SmartSensor HD,6.0,3,True,False
+SEN-039,Jl. Suryo - Senopati,Lidar,2023-02-07,Active,South,20,30,RD-0106,Cibubur,2023-11-10,v2.2.3,5G,Battery,2024-03-30 14:12:00,-6.161325,106.978698,Kapsch,SmartSensor HD,7.1,6,False,True
+SEN-040,Jl. Senopati - Kebayoran Baru,Radar,2021-02-24,Offline,North,20,60,RD-0103,Sunter,2023-10-17,v3.2.5,4G/LTE,Grid,2024-03-30 01:56:00,-6.114532,106.932861,Swarco,X-Stream,7.8,6,True,True
+SEN-041,Jl. Trunojoyo - Kebayoran,Infrared,2022-08-01,Active,South,5,60,RD-0075,Tangerang,2023-12-19,v2.1.0,Fiber,Grid,2024-03-30 15:47:00,-6.309729,106.733502,Kapsch,TMS-2000,6.6,2,True,True
+SEN-042,Jl. Kemang Raya - Bangka,Inductive Loop,2023-03-12,Active,South,5,60,RD-0164,Slipi,2023-12-09,v3.0.1,5G,Battery,2024-03-30 13:30:00,-6.10176,106.932798,Kapsch,TMS-2000,6.6,5,False,False
+SEN-043,Jl. Warung Buncit - Pejaten,Lidar,2021-02-01,Active,South,50,300,RD-0117,Cakung,2023-11-13,v2.2.3,Fiber,Solar Panel,2024-03-30 02:40:00,-6.184785,106.865592,Q-Free,RTMS-X,4.8,4,True,True
+SEN-044,Jl. Kalibata - Jati Padang,Lidar,2022-02-23,Active,North-East,5,30,RD-0073,Kuningan,2023-12-18,v3.0.1,LoRaWAN,Battery,2024-03-30 17:14:00,-6.208782,106.959365,Swarco,X-Stream,5.9,5,False,False
+SEN-045,Jl. Pasar Minggu - Lenteng Agung,Camera,2022-11-09,Active,West,30,30,RD-0141,Cibubur,2024-03-08,v2.1.0,LoRaWAN,Grid,2024-03-30 02:12:00,-6.233759,106.988614,Kapsch,TrafiRadar,6.5,4,False,True
+SEN-046,Jl. OTT - Cipayung,Camera,2021-04-05,Offline,West,10,120,RD-0063,Mangga Dua,2024-01-06,v3.2.5,5G,Grid,2024-03-30 04:35:00,-6.348705,106.903978,Kapsch,TMS-2000,7.1,1,True,False
+SEN-047,Jl. Raya Condet - Balekambang,Camera,2021-05-22,Active,North-East,5,300,RD-0046,Cibubur,2024-01-04,v3.1.0,5G,Grid,2024-03-30 10:20:00,-6.119198,106.808586,Efkon,X-Stream,7.8,2,True,False
+SEN-048,Jl. Bypass - Cibubur,Radar,2023-06-04,Offline,North,15,300,RD-0102,Depok,2023-12-31,v3.2.5,WiFi,Grid,2024-03-30 09:46:00,-6.116785,106.714863,Q-Free,RTMS-X,4.6,2,True,True
+SEN-049,Jl. Alternatif Cibubur - Depok,Radar,2021-04-14,Maintenance,South,10,60,RD-0151,Sudirman,2024-03-13,v3.0.1,4G/LTE,Solar Panel,2024-03-30 18:50:00,-6.207493,106.766529,Efkon,TrafiRadar,7.1,6,False,False
+SEN-050,Jl. Raya Bogor - Citereup,Infrared,2023-04-05,Active,North,20,60,RD-0119,Cawang,2023-11-22,v2.1.0,5G,Solar Panel,2024-03-30 08:57:00,-6.287616,106.973461,Q-Free,SmartSensor HD,7.3,5,True,True
