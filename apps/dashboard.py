@@ -173,3 +173,4 @@ with col1:
 with col2:
     st.metric("Average Speed (km/h)", f"{speed:.1f}")
 
+locations.to_csv(os.path.join(DATA_PATH, "sensor_locations_with_coords.csv"), index=False)
