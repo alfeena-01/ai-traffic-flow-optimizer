@@ -172,3 +172,4 @@ with col1:
     st.metric("Predicted Vehicle Count", f"{prediction:.0f}")
 with col2:
     st.metric("Average Speed (km/h)", f"{speed:.1f}")
+
