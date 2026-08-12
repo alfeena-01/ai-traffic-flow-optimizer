@@ -144,3 +144,24 @@ else:
     st.warning(
         "⚠️ No latitude/longitude data found for the selected hour. Please check sensor_locations.json and data files."
     )
+
+
+use_predictions = st.sidebar.checkbox("Show Predicted Counts on Heatmap")
+
+if use_predictions:
+    traffic["predicted_count"] = model.predict(
+        traffic[["hour","day_of_week","is_weekend",
+                 "average_speed_kmh","precipitation_mm","visibility_km",
+                 "vehicle_count_lag1","vehicle_count_lag2"]]
+    )
+    weight_col = "predicted_count"
+else:
+    weight_col = "vehicle_count"
+
+heatmap_layer = pdk.Layer(
+    "HeatmapLayer",
+    data=traffic_filtered.dropna(subset=["latitude","longitude"]),
+    get_position=["longitude","latitude"],
+    get_weight=weight_col,
+    radiusPixels=60,
+)
