@@ -197,4 +197,10 @@ traffic["predicted_count"] = model.predict(
 use_predictions = st.sidebar.checkbox("Show Predicted Counts on Heatmap")
 weight_col = "predicted_count" if use_predictions else "vehicle_count"
 
-heatmap_layer = 
+heatmap_layer = pdk.Layer(
+    "HeatmapLayer",
+    data=traffic_filtered.dropna(subset=["latitude","longitude"]),
+    get_position=["longitude","latitude"],
+    get_weight=weight_col,
+    radiusPixels=60,
+)
