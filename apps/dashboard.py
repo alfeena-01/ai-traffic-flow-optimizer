@@ -175,3 +175,22 @@ with col2:
 
 locations.to_csv(os.path.join(DATA_PATH, "sensor_locations_with_coords.csv"), index=False)
 get_weight="vehicle_count"
+# Add derived features to traffic
+traffic["day_of_week"] = traffic["timestamp"].dt.dayofweek
+traffic["is_weekend"] = traffic["day_of_week"].isin([5,6]).astype(int)
+
+# Lag features: shift vehicle_count by 1 and 2
+traffic["vehicle_count_lag1"] = traffic["vehicle_count"].shift(1)
+traffic["vehicle_count_lag2"] = traffic["vehicle_count"].shift(2)
+
+# Drop rows with NaN lag values
+traffic = traffic.dropna(subset=["vehicle_count_lag1","vehicle_count_lag2"])
+
+# Now you can safely predict
+traffic["predicted_count"] = model.predict(
+    traffic[[
+        "hour","day_of_week","is_weekend",
+        "average_speed_kmh","precipitation_mm","visibility_km",
+        "vehicle_count_lag1","vehicle_count_lag2"
+    ]]
+)
