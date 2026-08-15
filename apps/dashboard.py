@@ -204,4 +204,3 @@ heatmap_layer = pdk.Layer(
             get_weight=weight_col,
                      
          radiusPixels=60,
-                          )
