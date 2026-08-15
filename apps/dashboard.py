@@ -201,4 +201,7 @@ heatmap_layer = pdk.Layer(
     "HeatmapLayer",
     data=traffic_filtered.dropna(subset=["latitude","longitude"]),
        get_position=["longitude","latitude"],
+            get_weight=weight_col,
+                     radiusPixels=60,
+                 )
          
