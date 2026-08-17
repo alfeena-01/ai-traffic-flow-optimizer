@@ -20,3 +20,18 @@ AI-Traffic-Flow-Optimizer/
 │
 ├── requirements.txt          # Python dependencies
 └── README.md                 # Project documentation
+
+
+📊 Dataset Acquisition
+Traffic Sensor Data  
+Download from Kaggle:
+
+Example: Jakarta Traffic Sensor Dataset  
+Save as data/traffic_sensor_data.csv.
+
+Weather Data  
+Download from Kaggle or OpenWeather API:
+Save as data/weather_conditions.csv.
+
+Sensor Locations  
+JSON file with sensor metadata and coordinates:
