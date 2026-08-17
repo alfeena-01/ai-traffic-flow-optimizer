@@ -52,3 +52,4 @@ JSON file with sensor metadata and coordinates:
   ]
 }
 
+⚙️ Environment Setup
