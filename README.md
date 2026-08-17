@@ -66,3 +66,12 @@ python -m pip install --upgrade pip setuptools wheel
 pip install -r requirements.txt
 
 requirements.txt
+
+streamlit
+pydeck
+pandas
+scikit-learn
+joblib
+ipykernel
+geopy
+
