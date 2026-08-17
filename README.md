@@ -95,3 +95,5 @@ joblib.dump(model, "models/traffic_model.pkl")
 📈 Dashboard (Streamlit)
 
 Run:
+
+streamlit run apps/dashboard.py
