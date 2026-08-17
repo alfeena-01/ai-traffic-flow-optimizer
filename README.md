@@ -38,3 +38,17 @@ Save as data/weather_conditions.csv.
 
 Sensor Locations  
 JSON file with sensor metadata and coordinates:
+
+{
+  "dataset_info": {...},
+  "sensors": [
+    {
+      "sensor_id": "SEN-001",
+      "location_name": "Jl. Sudirman - Bundaran HI",
+      "coordinates": {"latitude": -6.337762, "longitude": 106.853379},
+      "sensor_type": "Camera",
+      "status": "Active"
+    }
+  ]
+}
+
