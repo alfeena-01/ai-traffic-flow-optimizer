@@ -75,3 +75,15 @@ joblib
 ipykernel
 geopy
 
+🧪 Model Training
+Open notebooks/traffic_modeling.ipynb.
+
+Steps:
+
+Load traffic + weather datasets.
+
+Feature engineering: hour, day_of_week, is_weekend, lag features.
+
+Train ML model (RandomForestRegressor or XGBoost).
+
+Save model:
