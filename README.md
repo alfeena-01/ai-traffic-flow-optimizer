@@ -97,3 +97,13 @@ joblib.dump(model, "models/traffic_model.pkl")
 Run:
 
 streamlit run apps/dashboard.py
+
+Features:
+
+Sidebar controls: hour, day, weather inputs.
+
+Prediction panel: ML model predicts vehicle count.
+
+Heatmap: Pydeck visualization of traffic intensity.
+
+Toggle: Actual vs Predicted counts.
