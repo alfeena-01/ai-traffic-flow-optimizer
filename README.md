@@ -88,3 +88,6 @@ Feature engineering: hour, day_of_week, is_weekend, lag features.
 Train ML model (RandomForestRegressor or XGBoost).
 
 Save model:
+
+import joblib
+joblib.dump(model, "models/traffic_model.pkl")
